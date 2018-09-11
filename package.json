@@ -1,0 +1,37 @@
+{
+  "name": "ricardopereztest",
+  "version": "0.0.1",
+  "description": "test de virtualmind",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "webpack --watch",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Ricardo Pérez",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "intl-relativeformat": "^2.1.0",
+    "mysql": "^2.16.0",
+    "pug": "^2.0.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "ava": "^0.25.0",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "nodemon": "^1.18.4",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
