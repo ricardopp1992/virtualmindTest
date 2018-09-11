@@ -6,7 +6,8 @@ const plugins = [new MiniCssExtractPlugin({filename : 'css/[name].css'})]
 module.exports = {
     mode : 'development',
     entry : {
-        cotizacion : path.resolve(__dirname, 'interface/src/index.js')
+        cotizacion : path.resolve(__dirname, 'interface/src/cotizacion/index.js'),
+        usuario : path.resolve(__dirname, 'interface/src/usuarios/index.js')
     },
     output : {
         path : path.resolve(__dirname, 'public'),

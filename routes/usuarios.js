@@ -2,6 +2,11 @@ const express = require('express')
 const routes = express.Router()
 const Users = require('../db-usuario/services/usuarios')
 
+routes.get('/usuario', (req, res) => {
+    res.render('../views/usuario.pug', {title : 'ABM de usuario'})
+
+})
+
 routes.get('/usuario/id/:id', (req, res) => {
     const id = req.params.id
     console.log(id)
