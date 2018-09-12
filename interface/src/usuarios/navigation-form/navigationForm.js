@@ -1,20 +1,42 @@
 import React from 'react'
 
 function NavigationForm(props){
+    const nav = [
+        {
+            text : "Create",
+            key : "create"
+        },
+        {
+            text : "Update",
+            key : "update"
+        },
+        {
+            text : "Find User",
+            key : "findUser"
+        },
+        {
+            text : "Delete",
+            key : "delete"
+        }
+    ]
     return (
         <ul className="nav nav-tabs">
-            <li className="nav-item">
-                <a onClick={props.handleForm} value="sadasd"  className="nav-link" href="#">Create</a>
-            </li>
-            <li className="nav-item">
-                <a onClick={props.handleForm} className="nav-link" href="#">Find user</a>
-            </li>
-            <li className="nav-item">
-                <a onClick={props.handleForm} className="nav-link" href="#">Update user</a>
-            </li>
-            <li className="nav-item">
-                <a onClick={props.handleForm} className="nav-link" href="#">Delete user</a>
-            </li>
+            {
+                nav.map((element) => {
+                    return (
+                        <li 
+                            key={element.key}
+                            className="nav-item"
+                            onClick={props.handleForm} 
+                            id={element.key} 
+                            className="nav-link"
+                            ref={props.setRef}
+                            >
+                            <a href="#" > {element.text} </a>
+                        </li>
+                    )
+                })
+            }
         </ul>
     )
 }
