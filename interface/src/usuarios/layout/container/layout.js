@@ -9,7 +9,7 @@ class Layout extends Component {
 
     handleForm = (event) => {
         event.preventDefault()
-        console.log(this.val)
+        console.log()
     }
 
     render(){
