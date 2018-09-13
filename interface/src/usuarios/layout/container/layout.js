@@ -10,51 +10,30 @@ class Layout extends Component {
         this.state = {
             formRendered :  <CreateForm />
         }
-    }
 
-    handleForm = (event) => {
-        console.log(this.link.id)
-        switch(this.link.id){
-            case 'create':
-                this.setState({
-                    formRendered : (
-                        <CreateForm />
-                    )
-                })
-                break;
-            case 'update':
-                this.setState({
-                    formRendered : (
-                        <UpdateForm />
-                    )
-                })
-                break;
-            // case 'findUser':
-            //     this.setState({
-            //         formRendered : (
-            //             <FindUserForm />
-            //         )
-            //     })
-            //     break;
-            case 'delete':
-                this.setState({
-                    formRendered : (
-                        <UpdateForm />
-                    )
-                })
-                break;  
-        }    
-        
-    }
-
-    setRef = (element) => {
-        this.link = element
+    } 
+    
+    handleForm = (element) => {
+        return (event) => {
+            switch(element){
+                case 'create':
+                    this.setState({
+                        formRendered : <CreateForm />
+                    })
+                    break
+                case 'update':
+                    this.setState({
+                        formRendered : <UpdateForm />
+                    })
+                    break
+            }
+        }
     }
 
     render(){
         return (
             <div className="">
-                <NavigationForm setRef={this.setRef} handleForm={this.handleForm} />
+                <NavigationForm handleForm={this.handleForm} />
                 {
                     this.state.formRendered
                 }
